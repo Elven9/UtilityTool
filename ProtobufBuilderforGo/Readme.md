@@ -15,5 +15,5 @@ The tool helps to compile target `.proto` file to golang codes to a certain dire
 docker build -t elven9/protobuf-builder-for-golang .
 
 # Start A Container and Bind The Source Codes to Container
-docker run --rm -it elven9/protobuf-builder-for-golang:latest
+docker run --rm -it --mount type=bind,source=$(pwd),target=/go/protobuf-src elven9/protobuf-builder-for-go
 ```
